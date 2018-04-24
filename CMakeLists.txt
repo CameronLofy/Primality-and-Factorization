@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.9)
-project(CMPE126Exam1-Tuesday)
+project(lab10test)
 
 if(WIN32)
     if (CYGWIN)
@@ -20,9 +20,9 @@ set(SOURCE_FILES main.cpp)
 
 add_executable(labs_main ${SOURCE_FILES})
 
-include_directories(lib/exam/inc)
+include_directories(lib/lab10/inc)
 
-add_subdirectory(lib/exam lib_lab_exam)
+add_subdirectory(lib/lab10 lib_lab10)
 add_subdirectory(test)
 
-target_link_libraries(labs_main lib_lab_exam)
+target_link_libraries(labs_main lib_lab10)

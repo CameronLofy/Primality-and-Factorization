@@ -1,7 +1,7 @@
 # Lab Exam 1 #
 ###### Tuesday, 20 March 2018 ######
 
-For this exam you will be implementing a basic inventory system using linked lists and stacks. The framework and tests for the exam have been provided for you in this repository. You will have 3 hour to implement all of the functions and verify they work using the tests provided to you. These are the tests you lab exam will be graded on. 
+For this lab10 you will be implementing a basic inventory system using linked lists and stacks. The framework and tests for the lab10 have been provided for you in this repository. You will have 3 hour to implement all of the functions and verify they work using the tests provided to you. These are the tests you lab lab10 will be graded on.
 
 **Submissions that don't compile will receive a zero.**
 
@@ -9,7 +9,7 @@ For this exam you will be implementing a basic inventory system using linked lis
 
 ## Instructions ##
 
-The framework you have been given has everything you need to finish this exam. You will need to implement all of the functions that haven't been implemented yet and verify that they work using the provided tests. 
+The framework you have been given has everything you need to finish this lab10. You will need to implement all of the functions that haven't been implemented yet and verify that they work using the provided tests.
 
 Your inventory system will be stored using a singly linked list. This means that adding an item to the inventory should be done in constant time. An abstract representation of inventory can be seen in the image below.
 
@@ -28,11 +28,11 @@ Because the stack holds on to two items, the price and the date, we need to enca
 * Implement `inventory` and verify it works
 
 ### Advice ###
-This exam may look overwhelming, but it really shouldn't be. Take a minute and count how many simply getter's and setters you have been tasked with implementing. Most of those will be copy and paste with a line or two changed. 
+This lab10 may look overwhelming, but it really shouldn't be. Take a minute and count how many simply getter's and setters you have been tasked with implementing. Most of those will be copy and paste with a line or two changed.
 
-We have provided you with all of the tests you need to be successful on this exam. We will not be changing out these tests when we grade your exam. You have all of the answers to this exam, you just need to write the code to make the answers work.  
+We have provided you with all of the tests you need to be successful on this lab10. We will not be changing out these tests when we grade your lab10. You have all of the answers to this lab10, you just need to write the code to make the answers work.
 
-Remember, this is open every thing other than a person answering your questions. You can use all of the resources available to you to finish this exam. Look at your past labs for ideas on how to implement these functions. 
+Remember, this is open every thing other than a person answering your questions. You can use all of the resources available to you to finish this lab10. Look at your past labs for ideas on how to implement these functions.
 
 While you haven't seen a linked list implemented like this before, where you don't have all of the standard functions, it functions exactly the same. 
 
