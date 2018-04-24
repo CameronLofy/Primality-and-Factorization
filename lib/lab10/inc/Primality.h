@@ -10,7 +10,7 @@
 namespace lab10{
     class Primality {
     public:
-        bool isPrime(int key);
+        bool isPrime(long key);
 
 
     };
