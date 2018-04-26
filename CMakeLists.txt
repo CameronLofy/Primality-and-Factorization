@@ -25,4 +25,5 @@ include_directories(lib/lab10/inc)
 add_subdirectory(lib/lab10 lib_lab10)
 add_subdirectory(test)
 
+
 target_link_libraries(labs_main lib_lab10)

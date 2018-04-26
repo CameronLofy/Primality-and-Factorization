@@ -8,4 +8,4 @@ add_executable(runBasicTests
 add_subdirectory(gtest-1.7.0)
 
 target_link_libraries(runBasicTests gtest gtest_main)
-target_link_libraries(runBasicTests lib_lab_exam)
+target_link_libraries(runBasicTests lib_lab10)
