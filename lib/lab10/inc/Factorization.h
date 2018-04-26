@@ -11,7 +11,7 @@ namespace lab10{
     class Factorization{
     public:
 
-        int get_prime_factors(long input);
+        long get_prime_factors(long input);
 
     };
 
