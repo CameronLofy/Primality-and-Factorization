@@ -50,3 +50,12 @@ TEST(prime_factorization, PrimalityBig){
     EXPECT_TRUE(obj1. isPrime(2147483647));
 
 }
+
+TEST(prime_factorization, primesmallaf){
+    lab10::Primality obj1;
+    EXPECT_FALSE(obj1.isPrime(0));
+    EXPECT_FALSE(obj1.isPrime(1));
+    EXPECT_TRUE(obj1.isPrime(2));
+    EXPECT_TRUE(obj1.isPrime(3));
+
+}

@@ -21,6 +21,12 @@ namespace lab10{
     bool Primality::isPrime(long key){
         long first = 5;
         long last = key/2;
+        if(key==2||key==3){
+            return true;
+        }
+        if(key==1){
+            return false;
+        }
         if(key%2==0||key%3==0){
             return false;
         }
@@ -48,6 +54,8 @@ namespace lab10{
             return hello;
         }
         hello.push_back(2);
+        count++;
+        hello.push_back(3); //Isprime tests assume 2/3 aren't prime just to cut complexity.
         count++;
         for(int i=3; i<=input; i+=2){
             if(isPrime(i)){
