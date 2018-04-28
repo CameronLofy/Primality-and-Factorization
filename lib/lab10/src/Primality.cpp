@@ -18,8 +18,11 @@ namespace lab10{
     }
 
     bool Primality::isPrime(long key){
-        long first = 2;
+        long first = 5;
         long last = key/2;
+        if(key%2==0||key%3==0){
+            return false;
+        }
         while(first <= last)
         {
             if(first * last > key)
@@ -28,7 +31,7 @@ namespace lab10{
             }
             else if(first * last < key)
             {
-                first++;
+                first+=2;
             }
             else if(first * last == key)
             {
@@ -40,7 +43,12 @@ namespace lab10{
 
     std::vector<long> Primality::showprime(long input){
         std::vector<long> hello;
-        for(int i=2; i<=input; i++){
+        if(input ==1||input==0){
+            return hello;
+        }
+        hello.push_back(2);
+        count++;
+        for(int i=3; i<=input; i+=2){
             if(isPrime(i)){
                 hello.push_back(i);
                 count++;
