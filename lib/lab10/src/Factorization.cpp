@@ -23,10 +23,11 @@ namespace lab10{
     }
 
     void Factorization::print(std::vector<long> input){
-        for(int i=0; i<input.size(); i++){
+        for(int i=0; i<input.size()-1; i++){
             std::cout<< input.at(i);
             std::cout<< " ";
         }
+        std::cout<< input.at(input.size()-1);
 
     }
 
