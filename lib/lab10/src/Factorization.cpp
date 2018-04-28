@@ -13,7 +13,7 @@ namespace lab10{
         }
 
         //need to check for all other multiples of prime numbers
-        for(long i=3; i<input; i++){    //checks every number until the input for divisibility
+        for(long i=3; i<=input; i++){    //checks every number until the input for divisibility
             while(input%i ==0){         //if number is divisible
                 prime.push_back(i);     //push divisible number into vector
                 input = input/i;        //divides input by divisible number
