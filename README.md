@@ -16,3 +16,11 @@ This code will:
 - isPrime(int input)
 
 - get_prime_factors(int input)
+
+- showprime(long input)
+
+- getcount()
+
+- get_prime_factors(long input)
+
+- print(std::vector<long> input)
