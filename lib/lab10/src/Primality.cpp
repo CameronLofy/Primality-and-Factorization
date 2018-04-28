@@ -55,8 +55,7 @@ namespace lab10{
         }
         hello.push_back(2);
         count++;
-        hello.push_back(3); //Isprime tests assume 2/3 aren't prime just to cut complexity.
-        count++;
+
         for(int i=3; i<=input; i+=2){
             if(isPrime(i)){
                 hello.push_back(i);
