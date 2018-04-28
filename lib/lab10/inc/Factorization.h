@@ -13,6 +13,8 @@ namespace lab10{
 
         std::vector<long> get_prime_factors(long input);
 
+        void print(std::vector<long> input);
+
     };
 
 }
