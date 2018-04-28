@@ -14,7 +14,8 @@ namespace lab10{
     }
 
     Primality::~Primality() {
-
+        user_input = 0;
+        count =0;
     }
 
     bool Primality::isPrime(long key){
