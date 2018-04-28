@@ -3,12 +3,12 @@
 //
 #include <vector>
 #include "Factorization.h"
-namespace lab10{            //TODO:: make prime number results into vector class?
+namespace lab10{
 
-    std::vector get_prime_numbers(long input){
-        std::vector prime;
+    std::vector<long> Factorization::get_prime_factors(long input){
+        std::vector<long> prime;
         while(input%2 == 0){    //divides by two until result is an odd number
-            prime.push_back(2); //inserts all prime 2s into vector
+            prime.push_back(2); //inserts all factored 2s into vector
             input = input/2;
         }
 
@@ -21,4 +21,6 @@ namespace lab10{            //TODO:: make prime number results into vector class
         }
         return prime;
     }
+
+
 }
