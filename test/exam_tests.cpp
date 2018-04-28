@@ -22,5 +22,5 @@ TEST(prime_factorization, Prime_Factorization_small){
     std::vector<long> obj3;
     EXPECT_FALSE(obj1.isPrime(100));
     obj3 = obj2.get_prime_factors(100);
-    EXPECT_EQ("2 2 5 5",obj2.print(obj3));
+    EXPECT_EQ("2 2 5 5", obj2.print(obj3));
 }
