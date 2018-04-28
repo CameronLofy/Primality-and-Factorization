@@ -11,7 +11,7 @@ namespace lab10{
     class Factorization{
     public:
 
-        long get_prime_factors(long input);
+        std::vector get_prime_factors(long input);
 
     };
 
