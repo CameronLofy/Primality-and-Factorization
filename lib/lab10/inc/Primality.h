@@ -10,11 +10,14 @@
 namespace lab10{
     class Primality {
         long user_input;
+        int count;
     public:
         Primality();
         Primality(long input);
         ~Primality();
         bool isPrime(long key);
+        std::vector<long> showprime(long input);
+        int getcount();
 
 
     };
