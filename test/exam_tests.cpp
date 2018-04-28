@@ -23,3 +23,7 @@ TEST(prime_factorization, Prime_Factorization_small){
     EXPECT_FALSE(obj1.isPrime(100));
     EXPECT_EQ(obj2.get_prime_factors(100), compare);
 }
+
+TEST(isPrime, large numbers){
+    lab10::Primality
+}
