@@ -10,7 +10,7 @@ namespace lab10{
         count =0;
     }
 
-    Primality::Primality(long input){
+    Primality::Primality(long input){       //is this needed?
         user_input = input;
     }
 
@@ -19,16 +19,31 @@ namespace lab10{
         count =0;
     }
 
+    bool Primality::simple_isPrime(long input){
+        if(input == 0 || input == 1){
+            return false;
+        }
+        if(input == 2){
+            return true;
+        }
+        for(int i=2; i<input; i++){
+            if(input%i == 0){
+                return false;
+            }
+        }
+        return true;
+    }
+
     bool Primality::isPrime(long key){
-        long first = 5;
-        long double last = sqrtl(key);
-        if(key==2||key==3){
+        long first = 11;
+        long last = key/11;
+        if(key==2||key==3||key==5||key==7){
             return true;
         }
         if(key==1){
             return false;
         }
-        if(key%2==0||key%3==0){
+        if(key%2==0||key%3==0||key%5==0||key%7==0){
             return false;
         }
         while(first <= last)
@@ -49,8 +64,14 @@ namespace lab10{
         return true;
     }
 
-    bool Primality::test_isPrime(long input){
-        for(int i = 2; i< sqrt(input); i++){
+    bool Primality::fast_isPrime(long input){
+        if(input == 0 || input == 1){
+            return false;
+        }
+        if(input == 2 || input == 3){
+            return true;
+        }
+        for(int i = 2; i <= sqrt(input); i++){
             if(input%i == 0){
                 return false;
             }

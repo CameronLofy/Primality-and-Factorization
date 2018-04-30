@@ -16,8 +16,9 @@ namespace lab10{
         Primality();
         Primality(long input);
         ~Primality();
+        bool simple_isPrime(long input);
         bool isPrime(long key);
-        bool test_isPrime(long input);
+        bool fast_isPrime(long input);
         std::vector<long> showprime(long input);
         int getcount();
 

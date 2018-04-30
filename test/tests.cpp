@@ -37,11 +37,12 @@ TEST(prime_factorization, Primality) {
     EXPECT_FALSE(obj1.isPrime(600));
     EXPECT_FALSE(obj1.isPrime(700));
     EXPECT_FALSE(obj1.isPrime(800));
-    EXPECT_TRUE(obj1.isPrime(25469));
+    EXPECT_FALSE(obj1.isPrime(1011212503));
     EXPECT_FALSE(obj1.isPrime(756521));
 
-
+    EXPECT_TRUE(obj1.isPrime(25469));
     EXPECT_TRUE(obj1.isPrime(306329));
+    EXPECT_TRUE(obj1.isPrime(15487469));
 }
 
 TEST(prime_factorization, showprimes){
@@ -67,11 +68,22 @@ TEST(prime_factorization, primesmallaf){
 
 }
 
-TEST(prime_factorization, testPrime){
+TEST(prime_factorization, fastPrime){
     lab10::Primality obj1;
-    EXPECT_FALSE(obj1.test_isPrime(10));
-    EXPECT_FALSE(obj1.test_isPrime(703));
-    EXPECT_TRUE(obj1.test_isPrime(2147483647));
-    EXPECT_FALSE(obj1.test_isPrime(2147483643));
-    EXPECT_FALSE(obj1.isPrime(756521));
+    EXPECT_FALSE(obj1.fast_isPrime(4));
+    EXPECT_FALSE(obj1.fast_isPrime(10));
+    EXPECT_FALSE(obj1.fast_isPrime(703));
+    EXPECT_TRUE(obj1.fast_isPrime(2147483647));
+    EXPECT_FALSE(obj1.fast_isPrime(2147483643));
+    EXPECT_FALSE(obj1.fast_isPrime(756521));
+}
+
+TEST(prime_factorization, simplePrime){ //slow method
+    lab10::Primality obj1;
+    EXPECT_FALSE(obj1.simple_isPrime(4));
+    EXPECT_FALSE(obj1.simple_isPrime(10));
+    EXPECT_FALSE(obj1.simple_isPrime(703));
+    EXPECT_TRUE(obj1.simple_isPrime(2147483647));
+    EXPECT_FALSE(obj1.simple_isPrime(2147483643));
+    EXPECT_FALSE(obj1.simple_isPrime(756521));
 }
