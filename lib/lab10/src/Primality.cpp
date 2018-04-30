@@ -2,6 +2,7 @@
 // Created by Jackson Truong on 4/20/18.
 //
 #include <vector>
+#include <cmath>
 #include "Primality.h"
 namespace lab10{
     Primality::Primality(){
@@ -20,7 +21,7 @@ namespace lab10{
 
     bool Primality::isPrime(long key){
         long first = 5;
-        long last = key/2;
+        long double last = sqrtl(key);
         if(key==2||key==3){
             return true;
         }
@@ -42,6 +43,15 @@ namespace lab10{
             }
             else if(first * last == key)
             {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    bool Primality::test_isPrime(long input){
+        for(int i = 2; i< sqrt(input); i++){
+            if(input%i == 0){
                 return false;
             }
         }

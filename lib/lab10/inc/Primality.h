@@ -6,6 +6,7 @@
 #include <string>
 #include <cmath>
 #include <iostream>
+#include <vector>
 
 namespace lab10{
     class Primality {
@@ -16,6 +17,7 @@ namespace lab10{
         Primality(long input);
         ~Primality();
         bool isPrime(long key);
+        bool test_isPrime(long input);
         std::vector<long> showprime(long input);
         int getcount();
 

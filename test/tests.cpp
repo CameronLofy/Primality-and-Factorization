@@ -20,8 +20,11 @@ TEST(prime_factorization, Prime_Factorization_small){
     lab10::Factorization obj2;
     std::vector<long> compare = std::vector<long>({2, 2, 5, 5});
     std::vector<long> compare2 = std::vector<long>({17, 53});
+    std::vector<long> compare3 = std::vector<long>({313, 2417});
     EXPECT_EQ(obj2.get_prime_factors(901), compare2);
     EXPECT_EQ(obj2.get_prime_factors(100), compare);
+    EXPECT_EQ(obj2.get_prime_factors(756521), compare3);
+
 }
 
 TEST(prime_factorization, Primality) {
@@ -34,6 +37,10 @@ TEST(prime_factorization, Primality) {
     EXPECT_FALSE(obj1.isPrime(600));
     EXPECT_FALSE(obj1.isPrime(700));
     EXPECT_FALSE(obj1.isPrime(800));
+    EXPECT_TRUE(obj1.isPrime(25469));
+    EXPECT_FALSE(obj1.isPrime(756521));
+
+
     EXPECT_TRUE(obj1.isPrime(306329));
 }
 
@@ -58,4 +65,13 @@ TEST(prime_factorization, primesmallaf){
     EXPECT_TRUE(obj1.isPrime(2));
     EXPECT_TRUE(obj1.isPrime(3));
 
+}
+
+TEST(prime_factorization, testPrime){
+    lab10::Primality obj1;
+    EXPECT_FALSE(obj1.test_isPrime(10));
+    EXPECT_FALSE(obj1.test_isPrime(703));
+    EXPECT_TRUE(obj1.test_isPrime(2147483647));
+    EXPECT_FALSE(obj1.test_isPrime(2147483643));
+    EXPECT_FALSE(obj1.isPrime(756521));
 }
