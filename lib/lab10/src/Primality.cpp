@@ -10,7 +10,7 @@ namespace lab10{
         count =0;
     }
 
-    Primality::Primality(long input){       //is this needed?
+    Primality::Primality(long input){
         user_input = input;
     }
 
@@ -19,6 +19,7 @@ namespace lab10{
         count =0;
     }
 
+    //the simplest but slowest prime check method
     bool Primality::simple_isPrime(long input){
         if(input == 0 || input == 1){
             return false;
@@ -34,19 +35,20 @@ namespace lab10{
         return true;
     }
 
+    //A fast method
     bool Primality::isPrime(long key){
-        long first = 11;
-        long last = key/11;
+        long first = 11;                        //already check for prime divisibility up to 11
+        long last = key/11;                     //so we can skip to 11 and end with input/11
         if(key==2||key==3||key==5||key==7){
             return true;
         }
         if(key==1){
             return false;
         }
-        if(key%2==0||key%3==0||key%5==0||key%7==0){
-            return false;
+        if(key%2==0||key%3==0||key%5==0||key%7==0){     //checking whether the input is divisible by the
+            return false;                               //first 4 primes to increase speed with larger number
         }
-        while(first <= last)
+        while(first <= last)    //similar to twoSum, goes until it finds one example of factors
         {
             if(first * last > key)
             {
@@ -64,15 +66,16 @@ namespace lab10{
         return true;
     }
 
+    //the faster prime check method
     bool Primality::fast_isPrime(long input){
-        if(input == 0 || input == 1){
+        if(input == 0 || input == 1){   //edge cases for 1 and 0
             return false;
         }
-        if(input == 2 || input == 3){
+        if(input == 2 || input == 3){   //edge cases for 2 and 3
             return true;
         }
-        for(int i = 2; i <= sqrt(input); i++){
-            if(input%i == 0){
+        for(int i = 2; i <= sqrt(input); i++){      //no need to check up until input
+            if(input%i == 0){                       //can stop at the square root of input
                 return false;
             }
         }
