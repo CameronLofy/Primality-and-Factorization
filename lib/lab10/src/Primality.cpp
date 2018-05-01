@@ -27,7 +27,10 @@ namespace lab10{
         if(input == 2){
             return true;
         }
-        for(int i=2; i<input; i++){
+        if(input %2==0){
+            return false;
+        }
+        for(int i=3; i<input; i+=2){
             if(input%i == 0){
                 return false;
             }
@@ -74,7 +77,10 @@ namespace lab10{
         if(input == 2 || input == 3){   //edge cases for 2 and 3
             return true;
         }
-        for(int i = 2; i <= sqrt(input); i++){      //no need to check up until input
+        if(input%2 == 0){
+            return false;
+        }
+        for(int i = 3; i <= sqrt(input); i+=2){      //no need to check up until input
             if(input%i == 0){                       //can stop at the square root of input
                 return false;
             }
@@ -91,7 +97,7 @@ namespace lab10{
         count++;
 
         for(int i=3; i<=input; i+=2){ //Starts at 3 and goes through odd numbers because even numbers are always not prime
-            if(isPrime(i)){// This uses the isPrime function so it will add complexity
+            if(fast_isPrime(i)){// This uses the isPrime function so it will add complexity
                 hello.push_back(i);
                 count++;
             }
