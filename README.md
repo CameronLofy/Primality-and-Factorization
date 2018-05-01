@@ -13,9 +13,13 @@ This code will:
 
 ### The following functions will be implemented ###
 
-- isPrime(int input)
+- simple_isPrime(long input);
 
-- get_prime_factors(int input)
+- isPrime(long input)
+
+- fast_isPrime(long input)
+
+- get_prime_factors(long input)
 
 - showprime(long input)
 
@@ -24,3 +28,5 @@ This code will:
 - get_prime_factors(long input)
 
 - print(std::vector<long> input)
+
+- primeprint(std::vector<long> input)

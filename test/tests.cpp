@@ -16,7 +16,7 @@ public:
 
 };
 
-TEST(prime_factorization, Prime_Factorization_small){
+TEST(prime_factorization, Prime_Factorization){
     lab10::Factorization obj2;
     std::vector<long> compare = std::vector<long>({2, 2, 5, 5});
     std::vector<long> compare2 = std::vector<long>({17, 53});
