@@ -27,6 +27,7 @@ namespace lab10{
         if(input == 2){
             return true;
         }
+
         for(int i=2; i<input; i++){
             if(input%i == 0){
                 return false;
@@ -94,7 +95,7 @@ namespace lab10{
         count++;
 
         for(int i=3; i<=input; i+=2){ //Starts at 3 and goes through odd numbers because even numbers are always not prime
-            if(isPrime(i)){// This uses the isPrime function so it will add complexity
+            if(fast_isPrime(i)){// This uses the isPrime function so it will add complexity
                 hello.push_back(i);
                 count++;
             }
