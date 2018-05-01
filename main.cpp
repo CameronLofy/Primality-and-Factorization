@@ -19,9 +19,13 @@ int main() {
 //
 
     lab10::Factorization obj2;
+    lab10::Primality obj4;
     std::vector<long> obj3;
+    std::vector<long> obj5;
     obj3 =obj2.get_prime_factors(10000);
+    obj5 = obj4.showprime(1000);
     obj2.print(obj3);
+    obj4.primeprint(obj5);
 
 
     return 0;

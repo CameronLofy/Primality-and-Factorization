@@ -103,5 +103,14 @@ namespace lab10{
         return count;
     }
 
+    void Primality::primeprint(std::vector<long> input){
+        for(int i=0; i<input.size()-1; i++){
+            std::cout<< input.at(i);
+            std::cout<< " ";
+        }
+        std::cout<< input.at(input.size()-1);
+        std::cout << std::endl;
+    }
+
 
 }

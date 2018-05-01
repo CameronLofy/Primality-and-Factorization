@@ -28,5 +28,6 @@ namespace lab10{
             std::cout<< " ";
         }
         std::cout<< input.at(input.size()-1);
+        std::cout << std::endl;
     }
 }
