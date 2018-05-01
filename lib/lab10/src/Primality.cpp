@@ -43,7 +43,7 @@ namespace lab10{
         if(key==2||key==3||key==5||key==7){
             return true;
         }
-        if(key==1){
+        if(key==0 || key==1){
             return false;
         }
         if(key%2==0||key%3==0||key%5==0||key%7==0){     //checking whether the input is divisible by the
