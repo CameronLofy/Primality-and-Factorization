@@ -21,7 +21,7 @@ int main() {
     lab10::Factorization obj2;
     lab10::Primality obj4;
     obj2.print(obj2.get_prime_factors(10000));
-    obj4.primeprint(obj4.showprime(1000));
+    obj4.primeprint(obj4.showprime(10000));
 
 
     return 0;

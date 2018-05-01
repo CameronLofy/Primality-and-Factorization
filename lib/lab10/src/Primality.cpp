@@ -56,7 +56,7 @@ namespace lab10{
             }
             else if(first * last < key)
             {
-                first+=2;
+                first+=2; // This increments through odd numbers to cut through complexity, 2 is the only even prime #
             }
             else if(first * last == key)
             {
@@ -85,16 +85,16 @@ namespace lab10{
         return true;
     }
 
-    std::vector<long> Primality::showprime(long input){
+    std::vector<long> Primality::showprime(long input){ //Shows the amount pf prime numbers until the input is reached
         std::vector<long> hello;
-        if(input ==1||input==0){
+        if(input ==1||input==0){ //Edge cases, these are not prime numbers but they are very small numbers
             return hello;
         }
-        hello.push_back(2);
+        hello.push_back(2); //Automatically pushes 2, basically the third edge case if input = 2. It will not enter the for loop
         count++;
 
-        for(int i=3; i<=input; i+=2){
-            if(isPrime(i)){
+        for(int i=3; i<=input; i+=2){ //Starts at 3 and goes through odd numbers because even numbers are always not prime
+            if(isPrime(i)){// This uses the isPrime function so it will add complexity
                 hello.push_back(i);
                 count++;
             }
@@ -102,7 +102,7 @@ namespace lab10{
         return hello;
     }
 
-    int Primality::getcount(){
+    int Primality::getcount(){ // Returns a count of how many prime numbers are within the showprime input
         return count;
     }
 
