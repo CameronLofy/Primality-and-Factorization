@@ -21,7 +21,7 @@ namespace lab10{
         bool fast_isPrime(long input);
         std::vector<long> showprime(long input);
         int getcount();
-
+        void primeprint(std::vector<long> input);
 
     };
 
