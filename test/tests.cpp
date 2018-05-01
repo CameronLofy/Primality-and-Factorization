@@ -77,8 +77,13 @@ TEST(prime_factorization, fastPrime){
     EXPECT_FALSE(obj1.fast_isPrime(10));
     EXPECT_FALSE(obj1.fast_isPrime(703));
     EXPECT_TRUE(obj1.fast_isPrime(2147483647));
+    EXPECT_TRUE(obj1.fast_isPrime(-2147483647));
     EXPECT_FALSE(obj1.fast_isPrime(2147483643));
     EXPECT_FALSE(obj1.fast_isPrime(756521));
+    EXPECT_TRUE(obj1.fast_isPrime(1301081));
+    EXPECT_TRUE(obj1.fast_isPrime(1301077));
+    EXPECT_TRUE(obj1.fast_isPrime(15487313));
+
 }
 
 TEST(prime_factorization, simplePrime){ //slow method

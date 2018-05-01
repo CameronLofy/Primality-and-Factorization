@@ -74,10 +74,13 @@ namespace lab10{
         if(input == 2 || input == 3){   //edge cases for 2 and 3
             return true;
         }
-        for(int i = 2; i <= sqrt(input); i++){      //no need to check up until input
-            if(input%i == 0){                       //can stop at the square root of input
-                return false;
-            }
+        if(input%2 == 0){
+            return false;
+        }
+        for(int i = 3; i <= sqrt(input); i+=2){      //no need to check up until input, and can skip even numbers
+            if(input%i == 0){                       //can stop at the square root of input because if there is a factor
+                return false;                       //of that number greater than the square root, then the other factor
+            }                                       //corresponding to the number will be less than the square root of n
         }
         return true;
     }
